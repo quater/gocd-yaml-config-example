@@ -44,7 +44,7 @@ pipelines:
                    source: bin/
                    destination: build
                - test:
-                   source: tests/
+                   sourceBLA: tests/
                    destination: test-reports/
               tabs:
                 report: test-reports/index.html
