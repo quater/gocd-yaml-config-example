@@ -1,7 +1,7 @@
 environments:
-  example:
+  blaenv:
     environment_variables:
-      EXAMPLE_DEPLOYMENT: testing
+      BLAENV_DEPLOYMENT: testing
     pipelines:
       - yaml-example-BLA
 pipelines:
