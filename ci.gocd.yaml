@@ -18,7 +18,7 @@ pipelines:
               tasks:
                - exec: # indicates type of task
                    command: make
-  "yaml-example-CHANGED": # definition of yaml-example pipeline
+  "yaml-example-CHANGED": # definition of yaml-example-CHANGED pipeline
     group: yaml-example-CHANGED
     label_template: "${mygit[:8]}"
     locking: off
@@ -30,7 +30,7 @@ pipelines:
       upstream:
         # type is optional here, material type is implied based on presence of pipeline and stage fields
         # type: dependency
-        pipeline: yamlpipe1
+        pipeline: yamlpipe1-CC
         stage: build
     stages: # list of stages in order
       - build: # name of stage
@@ -50,7 +50,7 @@ pipelines:
                 report: test-reports/index.html
               tasks: # ordered list of tasks to execute in job csharp
                - fetch:
-                   pipeline: yamlpipe1
+                   pipeline: yamlpipe1-CC
                    stage: build
                    job: build
                    source: test-bin/
